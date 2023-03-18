@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    ports:  
+      - "9986:80"
+    volumes:
+      - "/Users/YM/Public/php/tardis_ssp:/app"
+      - "/Users/YM/Public/php/nginx:/opt/docker/etc/nginx/conf.d"
+  redis:
+    image: "redis:alpine"
+  
+
